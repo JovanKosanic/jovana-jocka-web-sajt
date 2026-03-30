@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+<html lang="sr">
 <head>
-    <title>Podrži Jovana Jocka</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podrži Jovanu Jocku</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,7 +30,9 @@
         }
         .profile img {
             width: 100%;
+            max-width: 300px; /* maksimalna širina slike */
             border-radius: 10px;
+            margin-bottom: 15px; /* razmak između slike i teksta */
         }
         .donation {
             margin: 20px auto;
@@ -68,7 +74,7 @@
 </header>
 
 <div class="profile">
-    <img src="https://via.placeholder.com/400x400.png?text=Jovana+Jocka" alt="Jovana Jocka">
+    <img src="joka.jpg" alt="Jovana Jocka">
     <h2>Jovana Jocka</h2>
     <p>Pevacica, rad na muzici i novi hitovi.</p>
 </div>
@@ -92,7 +98,7 @@ function prikaziUputstvo() {
         return;
     }
     const uputstvo = `
-        Hvala na donaciji od ${iznos} din!<br>
+        Hvala na donaciji od ${iznos} din/euro! ( Vasa Jovana Jocka )<br>
         Uplata na žiro račun:<br>
         <strong>170001092289800050</strong><br>
         Primaoc: <strong>Jovana Jocka</strong><br>
