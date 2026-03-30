@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+<html lang="sr">
 <head>
-    <title>Podrži Jovana Jocka</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podrži Jovanu Jocku</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,7 +30,9 @@
         }
         .profile img {
             width: 100%;
+            max-width: 300px;
             border-radius: 10px;
+            margin-bottom: 15px;
         }
         .donation {
             margin: 20px auto;
@@ -42,6 +48,7 @@
             margin: 8px 0;
             border-radius: 5px;
             border: 1px solid #ccc;
+            box-sizing: border-box;
         }
         button {
             background-color: #ff6b81;
@@ -63,12 +70,13 @@
 <body>
 
 <header>
-    <h1>Podrži Jovana Jocka 🎤</h1>
+    <h1>Podrži Jovanu Jocku 🎤</h1>
     <p>Pomozite joj da stvori još jače hitove i radi na muzici 24/7!</p>
 </header>
 
 <div class="profile">
-    <img src="https://via.placeholder.com/400x400.png?text=Jovana+Jocka" alt="Jovana Jocka">
+    <!-- Online slika kao zamena za 'joka.jpg' -->
+    <img src="https://i.ibb.co/3yrx1KX/joka.jpg" alt="Jovana Jocka">
     <h2>Jovana Jocka</h2>
     <p>Pevacica, rad na muzici i novi hitovi.</p>
 </div>
@@ -92,12 +100,12 @@ function prikaziUputstvo() {
         return;
     }
     const uputstvo = `
-        Hvala na donaciji od ${iznos} din!<br>
+        Hvala na donaciji od ${iznos} dinara<br>
         Uplata na žiro račun:<br>
         <strong>170001092289800050</strong><br>
         Primaoc: <strong>Jovana Jocka</strong><br>
         Svrha: <strong>Donacija za muziku i hitove</strong><br>
-        Nakon uplate, vaša podrška ide direktno za rad na muzici!
+        Nakon uplate, vaša podrška ide direktno za rad na muzici! Hvala.
     `;
     document.getElementById("uputstvo").innerHTML = uputstvo;
 }
