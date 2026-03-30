@@ -1,0 +1,107 @@
+<head>
+    <title>Podrži Jovana Jocka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ff4757;
+            color: white;
+            padding: 30px 10px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .profile {
+            margin: 20px auto;
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            padding: 20px;
+        }
+        .profile img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .donation {
+            margin: 20px auto;
+            max-width: 400px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        input[type="number"], button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff4757;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Podrži Jovana Jocka 🎤</h1>
+    <p>Pomozite joj da stvori još jače hitove i radi na muzici 24/7!</p>
+</header>
+
+<div class="profile">
+    <img src="https://via.placeholder.com/400x400.png?text=Jovana+Jocka" alt="Jovana Jocka">
+    <h2>Jovana Jocka</h2>
+    <p>Pevacica, rad na muzici i novi hitovi.</p>
+</div>
+
+<div class="donation">
+    <h2>Doniraj sada</h2>
+    <input type="number" id="iznos" placeholder="Iznos donacije u din" min="1">
+    <button onclick="prikaziUputstvo()">Pošalji donaciju</button>
+    <p id="uputstvo"></p>
+</div>
+
+<footer>
+    &copy; 2026 Jovana Jocka – Donacije dostupne 24/7
+</footer>
+
+<script>
+function prikaziUputstvo() {
+    const iznos = parseInt(document.getElementById("iznos").value);
+    if (!iznos || iznos <= 0) {
+        alert("Unesi validan iznos donacije!");
+        return;
+    }
+    const uputstvo = `
+        Hvala na donaciji od ${iznos} din!<br>
+        Uplata na žiro račun:<br>
+        <strong>170001092289800050</strong><br>
+        Primaoc: <strong>Jovana Jocka</strong><br>
+        Svrha: <strong>Donacija za muziku i hitove</strong><br>
+        Nakon uplate, vaša podrška ide direktno za rad na muzici!
+    `;
+    document.getElementById("uputstvo").innerHTML = uputstvo;
+}
+</script>
+
+</body>
+</html>
